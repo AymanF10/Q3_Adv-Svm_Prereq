@@ -30,11 +30,50 @@ This project is a deep dive into the Solana Virtual Machine (SVM) prerequisites,
 - Develop predictive compute unit estimation
 - Add fine-grained compute unit tracking
 
+#### Compute Budget Optimization Diagram
+```mermaid
+flowchart TD
+    A[Start Transaction] --> B{Check Compute Budget}
+    B -->|Budget Sufficient| C[Initialize Compute Meter]
+    B -->|Budget Insufficient| D[Reject Transaction]
+    C --> E[Execute Instructions]
+    E --> F{Compute Units Remaining?}
+    F -->|Yes| G[Continue Execution]
+    F -->|No| H[Halt Execution]
+    G --> I[Update Compute Meter]
+    I --> E
+    H --> J[Return Instruction Error]
+    
+    subgraph Proposed Optimization
+    K[Implement Dynamic Compute Unit Allocation]
+    L[Use Predictive Compute Unit Estimation]
+    M[Add Fine-Grained Compute Unit Tracking]
+    end
+```
+
 ### 2. Memory Allocation and Management Optimization
 - Implement adaptive memory pooling
 - Add predictive memory pre-allocation
 - Optimize memory fragmentation handling
 - Introduce memory usage heuristics
+
+#### Memory Allocation Optimization Diagram
+```mermaid
+flowchart TD
+    A[Memory Allocation Request] --> B{Check Available Memory}
+    B -->|Sufficient Memory| C[Align Memory Address]
+    B -->|Insufficient Memory| D[Allocation Failure]
+    C --> E[Allocate Memory Block]
+    E --> F[Update Memory Pointer]
+    F --> G[Return Memory Address]
+    
+    subgraph Proposed Optimization
+    H[Implement Adaptive Memory Pooling]
+    I[Add Predictive Memory Pre-allocation]
+    J[Optimize Memory Fragmentation Handling]
+    K[Introduce Memory Usage Heuristics]
+    end
+```
 
 ### 3. Syscall Context and Tracing Optimization
 - Implement lightweight tracing mechanism
@@ -42,14 +81,21 @@ This project is a deep dive into the Solana Virtual Machine (SVM) prerequisites,
 - Optimize context switching overhead
 - Introduce trace compression
 
-### Optimization Flow Charts
-Detailed flow charts for each optimization area are available in the diagrams below:
-
-#### Compute Budget Optimization
-[Compute Budget Optimization Diagram]
-
-#### Memory Allocation Optimization
-[Memory Allocation Optimization Diagram]
-
-#### Syscall Context Optimization
-[Syscall Context Optimization Diagram] 
+#### Syscall Context Optimization Diagram
+```mermaid
+flowchart TD
+    A[Syscall Invocation] --> B[Prepare Syscall Context]
+    B --> C{Validate Syscall Parameters}
+    C -->|Valid| D[Execute Syscall]
+    C -->|Invalid| E[Reject Syscall]
+    D --> F[Log Trace Information]
+    F --> G[Update Syscall Context]
+    G --> H[Return Syscall Result]
+    
+    subgraph Proposed Optimization
+    I[Implement Lightweight Tracing Mechanism]
+    J[Add Selective Trace Logging]
+    K[Optimize Context Switching Overhead]
+    L[Introduce Trace Compression]
+    end
+``` 
