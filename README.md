@@ -1,11 +1,11 @@
-# Advanced SVM Prerequisites Analysis
+# ADV SVM Prerequisite
 
 ## Project Overview
 This project is a deep dive into the Solana Virtual Machine (SVM) prerequisites, focusing on code analysis and optimization of the `invoke_context` codebase.
 
-## Objectives
-- Analyze the `agave_invoke_context.rs` codebase
-- Annotate and comment on the code
+## What I did 
+- Analyzed the `agave_invoke_context.rs` codebase
+- Annotated and comment on the code
 - Identify potential optimization areas
 - Develop pseudo-code for potential improvements
 
@@ -14,21 +14,12 @@ This project is a deep dive into the Solana Virtual Machine (SVM) prerequisites,
 - `agave_invoke_context.rs`: Core codebase for analysis
 - `Task`: Project requirements document
 
-## Getting Started
-1. Review the `agave_invoke_context.rs` file
-2. Analyze the existing implementation
-3. Document observations and potential optimizations
-
-## Requirements
-- Rust programming language
-- Basic understanding of Solana Virtual Machine (SVM) concepts 
-
-## Potential Optimization Areas
+##Optimization Areas
 
 ### 1. Compute Budget and Metering Optimization
-- Implement dynamic compute unit allocation
+- Implement compute unit allocation
 - Develop predictive compute unit estimation
-- Add fine-grained compute unit tracking
+- Added compute unit tracking
 
 #### Compute Budget Optimization Diagram
 ```mermaid
