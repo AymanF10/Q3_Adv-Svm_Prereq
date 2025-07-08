@@ -1,7 +1,7 @@
 # ADV SVM Prerequisite
 
-## Project Overview
-This project is a deep dive into the Solana Virtual Machine (SVM) prerequisites, focusing on code analysis and optimization of the `invoke_context` codebase.
+## Assignment Overview
+This assignment is a peek into the Solana Virtual Machine (SVM) prerequisites, focusing on code analysis and optimization of the `invoke_context` codebase.
 
 ## What I did 
 - Analyzed the `agave_invoke_context.rs` codebase
